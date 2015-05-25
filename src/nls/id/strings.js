@@ -88,6 +88,7 @@ define({
     // Application preferences corrupt error strings
     "ERROR_PREFS_CORRUPT_TITLE"         : "Gagal Membaca Preferensi",
     "ERROR_PREFS_CORRUPT"               : "File preferensi Anda bukan merupakan JSON yang valid. File akan dibuka agar Anda dapat memperbaikinya. Anda perlu memulai ulang {APP_NAME} untuk memberlakukan perubahan.",
+    "ERROR_PROJ_PREFS_CORRUPT"          : "File preferensi proyek Anda bukan merupakan JSON yang valid. File akan dibuka agar Anda dapat memperbaikinya. Anda perlu memuat ulang proyek untuk memberlakukan perubahan.",
     
     // Application error strings
     "ERROR_IN_BROWSER_TITLE"            : "Ups! {APP_NAME} Belum Dapat Dijalankan di Peramban.",
@@ -132,9 +133,9 @@ define({
     "CONFIRM_FOLDER_DELETE_TITLE"       : "Konfirmasi Hapus",
     "CONFIRM_FOLDER_DELETE"             : "Apakah Anda yakin ingin menghapus folder <span class='dialog-filename'>{0}</span>?",
     "FILE_DELETED_TITLE"                : "File Dihapus",
-    "EXT_MODIFIED_WARNING"              : "<span class='dialog-filename'>{0}</span> telah dimodifikasi di disk.<br /><br />Apakah Anda ingin menyimpan file dan menimpa perubahan tersebut?",
-    "EXT_MODIFIED_MESSAGE"              : "<span class='dialog-filename'>{0}</span> telah dimodifikasi, tetapi juga ada perubahan yang belum disimpan di {APP_NAME}.<br /><br />Versi mana yang ingin Anda simpan?",
-    "EXT_DELETED_MESSAGE"               : "<span class='dialog-filename'>{0}</span> telah dihapus di disk, tetapi ada perubahan yang belum disimpan di {APP_NAME}.<br /><br />Apakah Anda ingin menyimpan perubahan?",
+    "EXT_MODIFIED_WARNING"              : "<span class='dialog-filename'>{0}</span> telah dimodifikasi di luar {APP_NAME}.<br /><br />Apakah Anda ingin menyimpan file dan menimpa perubahan tersebut?",
+    "EXT_MODIFIED_MESSAGE"              : "<span class='dialog-filename'>{0}</span> telah dimodifikasi di luar {APP_NAME}, tetapi juga ada perubahan yang belum disimpan di {APP_NAME}.<br /><br />Versi mana yang ingin Anda simpan?",
+    "EXT_DELETED_MESSAGE"               : "<span class='dialog-filename'>{0}</span> telah dihapus di luar {APP_NAME}, tetapi ada perubahan yang belum disimpan di {APP_NAME}.<br /><br />Apakah Anda ingin menyimpan perubahan?",
 
     // Generic dialog/button labels
     "DONE"                              : "Selesai",
@@ -417,6 +418,7 @@ define({
     "CMD_RELEASE_NOTES"                   : "Catatan Rilis",
     "CMD_GET_INVOLVED"                    : "Ikut Terlibat",
     "CMD_SHOW_EXTENSIONS_FOLDER"          : "Tampilkan Folder Ekstensi",
+    "CMD_HEALTH_DATA_STATISTICS"          : "Health Report",
     "CMD_HOMEPAGE"                        : "Beranda {APP_TITLE}",
     "CMD_TWITTER"                         : "{TWITTER_NAME} di Twitter",
     "CMD_ABOUT"                           : "Tentang {APP_TITLE}",
@@ -576,6 +578,7 @@ define({
     "CMD_REFRESH_WINDOW"                        : "Muat Ulang Dengan Ekstensi",
     "CMD_RELOAD_WITHOUT_USER_EXTS"              : "Muat Ulang Tanpa Ekstensi",
     "CMD_NEW_BRACKETS_WINDOW"                   : "Jendela {APP_NAME} Baru",
+    "CMD_LAUNCH_SCRIPT_MAC"                     : "Instal Shortcut Command Line",
     "CMD_SWITCH_LANGUAGE"                       : "Ganti Bahasa",
     "CMD_RUN_UNIT_TESTS"                        : "Jalankan Tes",
     "CMD_SHOW_PERF_DATA"                        : "Tampilkan Data Performa",
@@ -583,13 +586,30 @@ define({
     "CMD_LOG_NODE_STATE"                        : "Log Status Node di konsol",
     "CMD_RESTART_NODE"                          : "Jalankan Ulang Node",
     "CMD_SHOW_ERRORS_IN_STATUS_BAR"             : "Tampilkan Kesalahan di Status Bar",
-    "CMD_OPEN_BRACKETS_SOURCE"                  : "Buka Kode Sumber Brackets",
+    "CMD_OPEN_BRACKETS_SOURCE"                  : "Buka Kode Sumber {APP_NAME}",
+    
+    "CREATING_LAUNCH_SCRIPT_TITLE"              : "Shortcut Command Line {APP_NAME}",
+    "ERROR_CREATING_LAUNCH_SCRIPT"              : "Terjadi kesalahan saat menginstal shortcut command line. Silakan coba <a href='https://github.com/adobe/brackets/wiki/Command-Line-Arguments#troubleshooting'>tahapan-tahapan troubleshooting berikut</a>.<br/><br/>Alasan: {0}",
+    "ERROR_CLTOOLS_RMFAILED"                    : "Tidak dapat menghapus symlink <code>/usr/local/bin/brackets</code> yang sudah ada.",
+    "ERROR_CLTOOLS_MKDIRFAILED"                 : "Tidak dapat membuat direktori <code>/usr/local/bin</code>.",
+    "ERROR_CLTOOLS_LNFAILED"                    : "Tidak dapat membuat symlink <code>/usr/local/bin/brackets</code>.",
+    "ERROR_CLTOOLS_SERVFAILED"                  : "Kesalahan internal.",
+    "ERROR_CLTOOLS_NOTSUPPORTED"                : "Shortcut command line tidak didukung pada OS ini.",
+    "LAUNCH_SCRIPT_CREATE_SUCCESS"              : "Sukses! Sekarang Anda dapat meluncurkan {APP_NAME} dari command line: <code>brackets myFile.txt</code> untuk membuka berkas atau <code>brackets myFolder</code> untuk mengubah folder proyek. <br/><br/><a href='https://github.com/adobe/brackets/wiki/Command-Line-Arguments'>Pelajari lebih lanjut</a> bagaimana cara menggunakan {APP_NAME} dari command line.",
 
     "LANGUAGE_TITLE"                            : "Ganti Bahasa",
     "LANGUAGE_MESSAGE"                          : "Bahasa:",
     "LANGUAGE_SUBMIT"                           : "Muat ulang {APP_NAME}",
     "LANGUAGE_CANCEL"                           : "Batal",
     "LANGUAGE_SYSTEM_DEFAULT"                   : "Default Sistem",
+    
+    // extensions/default/HealthData
+    "HEALTH_DATA_NOTIFICATION"                  : "Preferensi Health Report",
+    "HEALTH_FIRST_POPUP_TITLE"                  : "Health Report {APP_NAME}",
+    "HEALTH_DATA_DO_TRACK"                      : "Bagikan informasi anonim mengenai bagaimana saya menggunakan {APP_NAME}",
+    "HEALTH_DATA_NOTIFICATION_MESSAGE"          : "Untuk meningkatkan kinerja {APP_NAME}, kami mengirim statistik-statistik <strong>anonim</strong> secara periodik kepada Adobe mengenai bagaimana Anda menggunakan {APP_NAME}. Informasi ini membantu kami memprioritaskan fitur, mencari bug, dan menemukan masalah-masalah dalam kegunaan.<br><br>Anda dapat melihat data Anda atau memilih untuk tidak membagikan data dengan memilih <strong>Bantuan > Health Report</strong>.<br><br><a href='https://github.com/adobe/brackets/wiki/Health-Data'>Pelajari lebih lanjut mengenai Health Report {APP_NAME}</a>",
+    "HEALTH_DATA_PREVIEW"                       : "Health Report {APP_NAME}",
+    "HEALTH_DATA_PREVIEW_INTRO"                 : "<p>Untuk meningkatkan kinerja {APP_NAME}, kami mengirim statistik-statistik secara terbatas dan <strong>anonim</strong> kepada Adobe mengenai bagaimana Anda menggunakan {APP_NAME}. Informasi ini membantu kami memprioritaskan fitur, mencari bug, dan menemukan masalah-masalah dalam kegunaan. <a href='https://github.com/adobe/brackets/wiki/Health-Data'>Pelajari lebih lanjut mengenai Health Report {APP_NAME}</a> dan bagaimana fitur ini dapat menguntungkan komunitas {APP_NAME} selagi menghargai privasi Anda.</p><p>Di bawah ini adalah tinjauan dari data yang akan dikirim pada Health Report berikutnya <em>jika</em> fitur ini diaktifkan.</p>",
 
     // extensions/default/InlineTimingFunctionEditor
     "INLINE_TIMING_EDITOR_TIME"                 : "Waktu",
@@ -612,7 +632,7 @@ define({
     "CMD_SHOW_PARAMETER_HINT"                   : "Tampilkan Petunjuk Parameter",
     "NO_ARGUMENTS"                              : "<tidak ada parameter>",
     "DETECTED_EXCLUSION_TITLE"                  : "Masalah Inferensi File JavaScript",
-    "DETECTED_EXCLUSION_INFO"                   : "Brackets mengalami masalah dalam memproses <span class='dialog-filename'>{0}</span>.<br><br>File ini tidak akan lagi diproses untuk Petunjuk Kode, Lompat ke Definisi atau Edit Cepat. Untuk mengaktifkan kembali file ini, buka <code>.brackets.json</code> pada proyek Anda dan ubah <code>jscodehints.detectedExclusions</code>.<br><br>Kemungkinan ini adalah bug pada Brackets. Jika Anda dapat memberikan salinan file ini, <a href='https://github.com/adobe/brackets/wiki/How-to-Report-an-Issue'>laporkan bug/a> dengan tautan ke file yang disebutkan di sini.",
+    "DETECTED_EXCLUSION_INFO"                   : "{APP_NAME} mengalami masalah dalam memproses <span class='dialog-filename'>{0}</span>.<br><br>File ini tidak akan lagi diproses untuk Petunjuk Kode, Lompat ke Definisi atau Edit Cepat. Untuk mengaktifkan kembali file ini, buka <code>.brackets.json</code> pada proyek Anda dan ubah <code>jscodehints.detectedExclusions</code>.<br><br>Kemungkinan ini adalah bug pada {APP_NAME}. Jika Anda dapat memberikan salinan file ini, <a href='https://github.com/adobe/brackets/wiki/How-to-Report-an-Issue'>laporkan bug/a> dengan tautan ke file yang disebutkan di sini.",
 
     // extensions/default/JSLint
     "JSLINT_NAME"                               : "JSLint",
@@ -624,6 +644,13 @@ define({
     "CMD_TOGGLE_RECENT_PROJECTS"                : "Proyek Terkini",
 
     // extensions/default/WebPlatformDocs
-    "DOCS_MORE_LINK"                            : "Baca selengkapnya"
+    "DOCS_MORE_LINK"                            : "Baca selengkapnya",
+    
+    // extensions/default/CodeFolding
+    "COLLAPSE_ALL"                  : "Lipat Semua",
+    "EXPAND_ALL"                    : "Besarkan Semua",
+    "COLLAPSE_CURRENT"              : "Lipat Saat Ini",
+    "EXPAND_CURRENT"                : "Besarkan Saat Ini"
 });
-/* Last translated for eef9c68a1fdff372b9ea6352cacb5e2506e55be9 */
+
+/* Last translated for 50cbe1b8848786c6be27d4788e4b6a367244abc2 */
