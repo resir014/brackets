@@ -405,8 +405,8 @@ define({
     "CMD_NEXT_DOC"                        : "Dokumen Berikutnya",
     "CMD_PREV_DOC"                        : "Dokumen Sebelumnya",
     "CMD_SHOW_IN_TREE"                    : "Tampilkan di Daftar File",
-    "CMD_SHOW_IN_EXPLORER"                : "Tampilkan di Penelusur",
-    "CMD_SHOW_IN_FINDER"                  : "Tampilkan di Pencari",
+    "CMD_SHOW_IN_EXPLORER"                : "Tampilkan di Explorer",
+    "CMD_SHOW_IN_FINDER"                  : "Tampilkan di Finder",
     "CMD_SHOW_IN_OS"                      : "Tampilkan di OS",
 
     // Help menu commands
